@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="9M5-ES-VxK" customClass="KTBannerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ku-h1-NRt">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                    <animations/>
+                </scrollView>
+                <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="497-ZU-JST">
+                    <rect key="frame" x="0.0" y="110" width="320" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tk6-ue-otz">
+                            <rect key="frame" x="8" y="0.0" width="222" height="20"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="dR4-ww-wW9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="21u-me-aRN">
+                            <rect key="frame" x="238" y="-9" width="74" height="37"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="r5q-rh-CmP"/>
+                                <constraint firstAttribute="width" constant="74" id="uxW-kN-1as"/>
+                            </constraints>
+                        </pageControl>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="21u-me-aRN" secondAttribute="trailing" constant="8" id="9XH-0M-6Sq"/>
+                        <constraint firstAttribute="height" constant="20" id="9nc-Kz-7V8"/>
+                        <constraint firstAttribute="bottom" secondItem="Tk6-ue-otz" secondAttribute="bottom" id="APj-m7-WNM"/>
+                        <constraint firstAttribute="bottom" secondItem="21u-me-aRN" secondAttribute="bottom" constant="-8" id="K5o-yH-RUr"/>
+                        <constraint firstItem="21u-me-aRN" firstAttribute="leading" secondItem="Tk6-ue-otz" secondAttribute="trailing" constant="8" id="ch2-Pd-ay1"/>
+                        <constraint firstItem="Tk6-ue-otz" firstAttribute="leading" secondItem="497-ZU-JST" secondAttribute="leading" constant="8" id="n8d-KK-A6s"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="497-ZU-JST" firstAttribute="leading" secondItem="9M5-ES-VxK" secondAttribute="leading" id="0yq-94-caq"/>
+                <constraint firstAttribute="trailing" secondItem="4Ku-h1-NRt" secondAttribute="trailing" id="FcP-92-xFw"/>
+                <constraint firstAttribute="bottom" secondItem="4Ku-h1-NRt" secondAttribute="bottom" id="KXD-Wx-3Hw"/>
+                <constraint firstAttribute="trailing" secondItem="497-ZU-JST" secondAttribute="trailing" id="eoh-Uk-cSL"/>
+                <constraint firstAttribute="bottom" secondItem="497-ZU-JST" secondAttribute="bottom" id="gD3-JO-oCb"/>
+                <constraint firstItem="4Ku-h1-NRt" firstAttribute="leading" secondItem="9M5-ES-VxK" secondAttribute="leading" id="pn1-U0-xBJ"/>
+                <constraint firstItem="4Ku-h1-NRt" firstAttribute="top" secondItem="9M5-ES-VxK" secondAttribute="top" id="vkI-5g-93Q"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bannerLabel" destination="Tk6-ue-otz" id="FZ0-Xg-RY6"/>
+                <outlet property="bannerMaskView" destination="497-ZU-JST" id="yC2-fI-QRG"/>
+                <outlet property="bannerPageControl" destination="21u-me-aRN" id="MhC-Rh-Zyb"/>
+                <outlet property="scrollView" destination="4Ku-h1-NRt" id="Bq3-fa-R2H"/>
+            </connections>
+            <point key="canvasLocation" x="286" y="286"/>
+        </view>
+    </objects>
+</document>
