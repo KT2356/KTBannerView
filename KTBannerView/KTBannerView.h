@@ -10,7 +10,7 @@
 #import "HotNewModel.h"
 
 @protocol KTBannerViewDelegate<NSObject>
-- (void)scrollviewDidTapped:(HotNewModel *)hotNewsModel;
+- (void)KTBannerViewDidTapped:(HotNewModel *)hotNewsModel;
 @end
 
 @interface KTBannerView : UIView

@@ -41,7 +41,7 @@
 
 - (void)dealloc {
     [_timer invalidate];
-     _timer = nil;
+    _timer = nil;
 }
 
 #pragma mark - public methods
@@ -98,9 +98,9 @@
         HotNewModel *model = _dataList[dataIndex];
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.frame = CGRectMake( (self.bounds.origin.x + UISCREEN_WIDTH * imageIndex),
-                                       self.bounds.origin.y,
-                                       UISCREEN_WIDTH,
-                                       self.bounds.size.height);
+                                     self.bounds.origin.y,
+                                     UISCREEN_WIDTH,
+                                     self.bounds.size.height);
         [_scrollView addSubview:imageView];
         if (model) {
             [imageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.zaichengdu.com/%@",model.imgUrl]] placeholderImage:self.placeHoldImg];
@@ -148,7 +148,7 @@
 - (void)scrollViewTapped {
     HotNewModel *model = _dataList[_currentPage];
     if (model) {
-        [self.delegate scrollviewDidTapped:model];
+        [self.delegate KTBannerViewDidTapped:model];
     }
 }
 

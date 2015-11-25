@@ -33,20 +33,17 @@
               GetHotNewsResult *result = [GetHotNewsResult objectWithKeyValues:data.body];
               //_dataList = [result.dataList arrayByAddingObjectsFromArray:result.dataList] ;
               _dataList = result.dataList;
-              
               [_bannerView bindData:_dataList];
-              [_bannerView bindData:_dataList];
-
           }
           failure:^(AFHTTPRequestOperation *operation, ResponseModel *data, DCRequestError *error) {
-
+              
           }];
 }
 
 
 
 /*-------*/
-- (void)scrollviewDidTapped:(HotNewModel *)hotNewsModel {
+- (void)KTBannerViewDidTapped:(HotNewModel *)hotNewsModel {
     NSLog(@"%@",hotNewsModel.bannerName);
 }
 
